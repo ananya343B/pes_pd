@@ -145,4 +145,17 @@ The flow mainly consists of the following steps:
 
    - Static timing analysis (STA)
 
+
+#### Introduction to OPENLANE
+
+OpenLane is an open-source digital ASIC (Application-Specific Integrated Circuit) design flow framework. It provides a comprehensive set of tools and scripts for automating and streamlining the process of designing and manufacturing custom silicon chips. 
+
+Main goal: to produce a clean GDSII with no human intervention.
+
+Two modes of operation: Autonomous and Interactive.
+
+**OPENLANE ASIC flow**
+
+![Screenshot (18)](https://github.com/ananya343B/pes_pd/assets/142582353/06d745f3-3c72-4bb1-abbb-1f3d7454e885)
+
 </details>
