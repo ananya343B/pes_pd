@@ -28,7 +28,7 @@ Open terminal and follow the steps below:
  
 #### Introduction to QFN-48 package, chip, pads, core, die and IPs
 
-- PADS:
+- PADS
 
 A peripheral device (PAD) refers to any external device or component that connects to an integrated circuit (IC) chip. These external devices can include input/output pins, power supply pins, clock input pins, and other interface pins that facilitate communication between the chip and the outside world. PADs are an essential part of chip design because they determine how the chip interacts with its environment.
 
