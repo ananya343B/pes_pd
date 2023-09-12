@@ -25,6 +25,7 @@ Open terminal and follow the steps below:
  Day 1
 </summary>
 <br>
+ 
 #### Introduction to QFN-48 package, chip, pads, core, die and IPs
 
 - PADS:
