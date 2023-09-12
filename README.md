@@ -22,6 +22,21 @@ Open terminal and follow the steps below:
 
 <details>
 <summary> 
- Day 7
+ Day 1
 </summary>
 <br>
+#### Introduction to QFN-48 package, chip, pads, core, die and IPs
+
+- PADS:
+
+A peripheral device (PAD) refers to any external device or component that connects to an integrated circuit (IC) chip. These external devices can include input/output pins, power supply pins, clock input pins, and other interface pins that facilitate communication between the chip and the outside world. PADs are an essential part of chip design because they determine how the chip interacts with its environment.
+
+- DIE
+
+The silicon wafer is divided into multiple identical, discrete sections, each of which is known as a "die." Each die contains a single instance of the integrated circuit design that was created by the semiconductor design team. These dies are created using photolithography and other semiconductor fabrication processes, and they share the same design and functionality.
+
+- CORE
+
+A "core" is a functional block of circuitry that performs a specific function within an integrated circuit design. Cores are often reusable, customizable, and can simplify the development process by allowing designers to integrate well-optimized and tested circuitry into their projects. They are a fundamental building block for complex IC designs.
+
+</details>
