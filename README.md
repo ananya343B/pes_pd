@@ -40,4 +40,17 @@ The silicon wafer is divided into multiple identical, discrete sections, each of
 
 A "core" is a functional block of circuitry that performs a specific function within an integrated circuit design. Cores are often reusable, customizable, and can simplify the development process by allowing designers to integrate well-optimized and tested circuitry into their projects. They are a fundamental building block for complex IC designs.
 
+photo
+
+- FOUNDRY IPs
+
+Foundry IPs are IPs that are specifically developed, qualified, and provided by the foundry to be used in conjunction with their manufacturing processes. These IPs are optimized for the foundry's technology, ensuring compatibility and efficiency. They are thoroughly tested and characterized to meet performance, power, and reliability requirements within the foundry's process.
+
+- MACROS
+
+Macros are pre-designed, customizable functional blocks that perform specific complex functions within an integrated circuit. They are a valuable tool for chip designers to streamline the design process, improve efficiency, and reduce the risk associated with complex custom circuit design.
+
+photo
+
+
 </details>
