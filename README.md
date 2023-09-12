@@ -40,7 +40,8 @@ The silicon wafer is divided into multiple identical, discrete sections, each of
 
 A "core" is a functional block of circuitry that performs a specific function within an integrated circuit design. Cores are often reusable, customizable, and can simplify the development process by allowing designers to integrate well-optimized and tested circuitry into their projects. They are a fundamental building block for complex IC designs.
 
-photo
+![Screenshot (13)](https://github.com/ananya343B/pes_pd/assets/142582353/8ca4186c-bbaa-48e9-b501-b7f97e8dbafc)
+
 
 - FOUNDRY IPs
 
@@ -50,7 +51,46 @@ Foundry IPs are IPs that are specifically developed, qualified, and provided by 
 
 Macros are pre-designed, customizable functional blocks that perform specific complex functions within an integrated circuit. They are a valuable tool for chip designers to streamline the design process, improve efficiency, and reduce the risk associated with complex custom circuit design.
 
-photo
+![Screenshot (14)](https://github.com/ananya343B/pes_pd/assets/142582353/fb4c471a-f8f3-43a5-bd4e-a4347d671095)
+
+#### Introduction to RISCV ISA and flow from Software applications to Hardware
+
+![Screenshot (15)](https://github.com/ananya343B/pes_pd/assets/142582353/0afcd24f-0200-4bee-981f-4e6f2d1138a3)
+
+
+1) C Program to RISC-V Assembly:
+
+- Write a C program.
+  
+- Compile it using a RISC-V-compatible C compiler to generate RISC-V assembly code.
+
+2) RISC-V Assembly to HDL:
+
+- Analyze the assembly code.
+
+- Write HDL code (e.g., Verilog or VHDL) to describe hardware components.
+  
+- Map assembly operations to hardware behavior in HDL.
+  
+- Design registers, datapath, control logic, and memory interfaces.
+
+3) HDL to Binary:
+
+- Use an HDL synthesis tool to translate HDL into a netlist.
+
+- Optimize the design for performance, area, and power.
+
+- Place and route components on the FPGA/ASIC.
+
+- Generate a binary configuration file.
+
+4) Program the Target Device:
+
+- Load the binary configuration onto the FPGA/ASIC to configure it as hardware.
+
+![Screenshot (16)](https://github.com/ananya343B/pes_pd/assets/142582353/63cd83f7-733a-40e6-8466-958c1f42b0a1)
+
+
 
 
 </details>
