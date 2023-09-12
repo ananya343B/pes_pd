@@ -69,7 +69,7 @@ Macros are pre-designed, customizable functional blocks that perform specific co
 - Analyze the assembly code.
 
 - Write HDL code (e.g., Verilog or VHDL) to describe hardware components.
-  
+ 
 - Map assembly operations to hardware behavior in HDL.
   
 - Design registers, datapath, control logic, and memory interfaces.
