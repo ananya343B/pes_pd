@@ -90,7 +90,59 @@ Macros are pre-designed, customizable functional blocks that perform specific co
 
 ![Screenshot (16)](https://github.com/ananya343B/pes_pd/assets/142582353/63cd83f7-733a-40e6-8466-958c1f42b0a1)
 
+#### Simplified RL2GDS flow
 
+The flow mainly consists of the following steps:
 
+![Screenshot (17)](https://github.com/ananya343B/pes_pd/assets/142582353/e8fff7da-5b9b-4ce4-beb3-48e50f7bdbd0)
+
+1) **Synthesis**
+
+   Converts RTL to circuit out of components from standard library cell (SLC). Standard cells have regular layout.
+
+2) **Floor/ Power planning**
+
+   - Chip floor planning: Partition the chip die between different system building blocks and place I/O pads.
+  
+   - Macro floor planning: Dimensions, pin location, row definition is decided.
+  
+   - Power planning: Power network is constructed.
+
+3) **Placement**
+
+   Place cells on floor paln rows, alligned with the sites.
+   Two steps:
+
+   - Global placement: Cells may overlap.
+  
+   - Detailed placement: Cells do not overlap.
+
+4) **Clock tree synthesis**
+
+   Creates clock distribution network.
+
+5) **Routing**
+
+   Implement the interconnects using available metal layers.
+
+   Divide and conquer in routing:
+
+   - Global routing: Generates routing guides.
+
+   - Detailed routing: Uses the routing guides and implement the actual wiring.
+
+6) **Sign off**
+
+   Construction of final layout and verification.
+
+   Physical verification:
+
+   - Design rules checking (DRC)
+
+   - Layout vs Schematic (LVS)
+
+   Timing verification:
+
+   - Static timing analysis (STA)
 
 </details>
