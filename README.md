@@ -1,6 +1,6 @@
 # Physical design for ASIC
 
-#### Advanced Physical Design using Openlane/Sky130
+#### Advanced Physical Design using Openlane/Sky130 
 
 <details>
 <summary> 
