@@ -203,32 +203,50 @@ Type ```docker``` command, a shell opens . In the shell type ```./flow.tcl -inte
 
 Type ```package require openlane 0.9``` to import all the packages
 
-![two](https://github.com/ananya343B/pes_pd/assets/142582353/da9450e7-1bc6-4f9d-8336-7d584db3f03f)
 
 ```prep -design picorv32a```
 
-![three](https://github.com/ananya343B/pes_pd/assets/142582353/3e8aa2cc-50c3-498d-ac76-38178f6eef05)
+![two](https://github.com/ananya343B/pes_pd/assets/142582353/da9450e7-1bc6-4f9d-8336-7d584db3f03f)
 
 
 After preparing the design, a new 'runs' folder is created.
 
-photo
+![three](https://github.com/ananya343B/pes_pd/assets/142582353/3e8aa2cc-50c3-498d-ac76-38178f6eef05)
+
+![four](https://github.com/ananya343B/pes_pd/assets/142582353/ad3c3631-9a20-4f16-857f-1ae2d6e98df7)
+
+
+```less merged.lef```
+
+![five](https://github.com/ananya343B/pes_pd/assets/142582353/12865f0d-3576-4901-84f2-d3d537570d2f)
+
+![six](https://github.com/ananya343B/pes_pd/assets/142582353/b8e7f044-3e7c-4716-861e-acaf84902671)
+
+``` less config.tcl```
+
+Default parameters taken by the run
+
+![seven](https://github.com/ananya343B/pes_pd/assets/142582353/ac821ee5-11eb-44a3-a428-89b98c7af487)
+
+![eight](https://github.com/ananya343B/pes_pd/assets/142582353/0e897980-d29a-4f72-a7a0-f8bd36777516)
+
+```less cmds.log```
+
+Has all commands.
+
+![nine](https://github.com/ananya343B/pes_pd/assets/142582353/91d75f98-ac9b-441f-92ab-b15744e6b21a)
+
+![ten](https://github.com/ananya343B/pes_pd/assets/142582353/26f6a09c-78b6-4732-bee8-9c04a1f7123c)
+
 
 ```run_synthesis```
 
-2 photo
+![twelve](https://github.com/ananya343B/pes_pd/assets/142582353/bfa6d72f-7ea4-4083-8a30-1a36b83538b0)
 
-Flop ratio = 1613/14876 = 0.108
-
-10.8% of the cells in our design are flip flops
+![eleven](https://github.com/ananya343B/pes_pd/assets/142582353/38512c83-a562-48cd-9b74-58abefada6d7)
 
 Netlist is generated in the runs folder
 
-photo
-
-
-
-
-
+![thirteen](https://github.com/ananya343B/pes_pd/assets/142582353/5393d808-caca-4251-bdd2-8390078193f1)
 
 </details>
