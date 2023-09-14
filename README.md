@@ -196,6 +196,37 @@ Design Preperation step First we go the the working directory
 
 ```cd openlane```
 
+Type ```docker``` command, a shell opens . In the shell type ```./flow.tcl -interactive```
+
+photo
+
+Type ```package require openlane 0.9``` to import all the packages
+
+photo
+
+```prep -design picorv32a```
+
+photo
+
+After preparing the design, a new 'runs' folder is created.
+
+photo
+
+```run_synthesis```
+
+2 photo
+
+Flop ratio = 1613/14876 = 0.108
+
+10.8% of the cells in our design are flip flops
+
+Netlist is generated in the runs folder
+
+photo
+
+
+
+
 
 
 </details>
