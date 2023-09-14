@@ -158,4 +158,24 @@ Two modes of operation: Autonomous and Interactive.
 
 ![Screenshot (18)](https://github.com/ananya343B/pes_pd/assets/142582353/06d745f3-3c72-4bb1-abbb-1f3d7454e885)
 
+
+Synthesis exploration is a process in digital integrated circuit design where designers explore various design options and configurations during the synthesis stage. The goal is to find the best combination of logic optimizations, architecture choices, and design constraints to meet the desired performance, power consumption, and area targets for the design.
+
+Design exploration refers to the process of investigating and evaluating various design alternatives, configurations, and choices to optimize a system or product's performance, functionality, cost, or other key attributes.
+
+Regression testing uses design exploration utility on approximately 70 designs and compares the results with the best known ones.
+
+- Design for Test (DFT) is a set of engineering techniques and practices employed during the design of integrated circuits and electronic systems to facilitate and improve the testing and verification process. The main objective of DFT is to make it easier to detect and diagnose faults, defects, or issues within the IC or system.
+
+- Physical implementation refers to the process of transforming a high-level logical description of an IC into a physical layout that can be fabricated. Process involves Floorplanning, Placement, Clock Tree Synthesis, Routing etc
+
+- Logic Equivalence Check done by using yosys. Every time the netlist is modified ,verification must be performed. CTS modifies the netlist, post placement optimizations modifies the netlist
+
+- Antenna Rules ViolationsWhen ametal wire segment is fabricated ,it can act as an antenna. Reactive ion etching causes charges to accumulate on the wire due to which transistor gates are damaged during fabrication. Solutions are bridging attaches a higher layer intermediary or adding antenna diode cell to leak away charges
+
+- Static Timing Analysis RC Extraction : DEF2SPEF and
+
+
+#####
+
 </details>
