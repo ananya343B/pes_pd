@@ -198,15 +198,17 @@ Design Preperation step First we go the the working directory
 
 Type ```docker``` command, a shell opens . In the shell type ```./flow.tcl -interactive```
 
-photo
+![one](https://github.com/ananya343B/pes_pd/assets/142582353/27106a1c-c77d-4294-95c8-a922da405f80)
+
 
 Type ```package require openlane 0.9``` to import all the packages
 
-photo
+![two](https://github.com/ananya343B/pes_pd/assets/142582353/da9450e7-1bc6-4f9d-8336-7d584db3f03f)
 
 ```prep -design picorv32a```
 
-photo
+![three](https://github.com/ananya343B/pes_pd/assets/142582353/3e8aa2cc-50c3-498d-ac76-38178f6eef05)
+
 
 After preparing the design, a new 'runs' folder is created.
 
