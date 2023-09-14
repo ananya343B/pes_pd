@@ -173,9 +173,29 @@ Regression testing uses design exploration utility on approximately 70 designs a
 
 - Antenna Rules ViolationsWhen ametal wire segment is fabricated ,it can act as an antenna. Reactive ion etching causes charges to accumulate on the wire due to which transistor gates are damaged during fabrication. Solutions are bridging attaches a higher layer intermediary or adding antenna diode cell to leak away charges
 
-- Static Timing Analysis RC Extraction : DEF2SPEF and
+  
 
 
-#####
+##### Getting Familiar with the Open Source EDA Tools
+
+Tool we will be working on pdk variant called sky130_fd_sc_hd
+
+sky130 : is the process name
+
+fd : skywater foundary
+
+sc : standard cell
+
+hd(high density) : variant of pdk
+
+Design Preperation step First we go the the working directory
+
+```cd Desktop/work/tools/```
+
+```cd openlane_working_dir/```
+
+```cd openlane```
+
+
 
 </details>
