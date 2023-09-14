@@ -10,7 +10,7 @@
 
 Create a Linux virtual machine with Ubuntu 18.04 (Bionic Beaver)(64 - bit) version.
 
-Select ```openlane.vdi``` as the virtual hard disk.
+Select ```openlane.vdi``` as the virtual hard disk. 
 
 Open terminal and follow the steps below:
 
