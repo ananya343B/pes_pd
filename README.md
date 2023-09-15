@@ -26,7 +26,7 @@ Open terminal and follow the steps below:
 </summary>
 <br>
  
-#### Introduction to QFN-48 package, chip, pads, core, die and IPs
+## Introduction to QFN-48 package, chip, pads, core, die and IPs
 
 - PADS
 
@@ -245,8 +245,26 @@ Has all commands.
 
 ![eleven](https://github.com/ananya343B/pes_pd/assets/142582353/38512c83-a562-48cd-9b74-58abefada6d7)
 
+Ratio of no. of flip flops to total no. of cells = 1613/18039 = 0.0894.
+
 Netlist is generated in the runs folder
 
 ![thirteen](https://github.com/ananya343B/pes_pd/assets/142582353/5393d808-caca-4251-bdd2-8390078193f1)
+
+</details>
+
+<details>
+<summary> 
+ Day 1
+</summary>
+<br>
+
+## Good floorplan vs Bad floorplan and Introduction to library cells
+
+### Chip floorplanning considerations
+
+
+
+
 
 </details>
