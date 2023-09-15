@@ -257,7 +257,7 @@ Netlist is generated in the runs folder
 
 <details>
 <summary> 
- Day 1
+ Day 2
 </summary>
 <br>
 
