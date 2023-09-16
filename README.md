@@ -289,7 +289,7 @@ Netlist is generated in the runs folder
 
    In the above case utilization ratio = 1.  Ideally utilization ratio is 0.5 to 0.6
 
- 
+   Aspect ratio = height/ width =1/1 = 1.
 
 
 
