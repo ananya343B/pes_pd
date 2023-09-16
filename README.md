@@ -265,6 +265,30 @@ Netlist is generated in the runs folder
 
 ### Chip floorplanning considerations
 
+1) Defining width and height of core and die
+
+   Consider a netlist having flip flops and combinational logic. We take the combinational logic in terms of blocks to calculate the area.
+
+   ![Screenshot (19)](https://github.com/ananya343B/pes_pd/assets/142582353/4fa35857-3743-4464-bbda-a2c4aa48b803)
+
+    Let the dimension of the blocks be 1x1.
+
+   ![Screenshot (20)](https://github.com/ananya343B/pes_pd/assets/142582353/33ee1743-e5a4-4971-8d51-8d9e8c7d615c)
+
+   Arrange the blocks for minimum area
+   
+   ![Screenshot (21)](https://github.com/ananya343B/pes_pd/assets/142582353/adcc3706-7966-4363-b8fc-a2f73a4fd767)
+
+   Place the logic segment inside the core
+
+   ![Screenshot (22)](https://github.com/ananya343B/pes_pd/assets/142582353/6b316025-9d14-4f47-b3e2-a00ec558dd7e)
+
+   ##### Aspect ratio and Utilization factor
+
+   ![Screenshot (23)](https://github.com/ananya343B/pes_pd/assets/142582353/0fb1d50f-0bfb-4723-990b-df8629001e28)
+
+   In the above case utilization ratio = 1.  Ideally utilization ratio is 0.5 to 0.6
+
 
 
 
