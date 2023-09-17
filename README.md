@@ -332,6 +332,39 @@ The primary purpose of a decoupling capacitor is to reduce or minimize voltage f
 
 The decoupling capacitor is placed as close to the circuit as possible to minimise loss due to large wire length.
 
+**3) Power planning**
+
+![Screenshot (30)](https://github.com/ananya343B/pes_pd/assets/142582353/d6acdd39-5846-4f23-832d-62d12e68357e)
+
+Signal from the driver should remain same until it reaches the load throught the line.
+
+To ensure that we require a power supply.
+
+Ground bounce: "Ground bounce" is a phenomenon that occurs when there is a temporary increase in the voltage level of the ground (GND) reference plane due to the switching activities of digital circuits. Ground bounce is a type of noise or voltage perturbation on the ground line of an IC. If the ground bounce is not within the noise margin, we may enter the undefined region which should be avoided.
+
+![Screenshot (31)](https://github.com/ananya343B/pes_pd/assets/142582353/395c9de5-a204-49c2-a551-44d98c8c366a)
+
+Voltage droop:  "Voltage droop," also known as "voltage sag" or "power droop," refers to a temporary decrease or reduction in the supply voltage level in response to a sudden increase in current demand within the circuit. 
+
+![Screenshot (32)](https://github.com/ananya343B/pes_pd/assets/142582353/b1b64bb2-5e7b-4705-baf3-6dd7d46064a4)
+
+These problems occur because there is only one voltage supply. We use multiple voltage supplies which run as a grid in the core. Such a pattern is referred as a voltage mesh.
+
+![Screenshot (33)](https://github.com/ananya343B/pes_pd/assets/142582353/144be3a8-9aec-4578-9895-b3bd8f8af61e)
+
+![Screenshot (34)](https://github.com/ananya343B/pes_pd/assets/142582353/fa2b93a2-7e0a-4dfe-9d01-7fca16fe0fbf)
+
+**4) Pin Placement and logical cell blockage**
+
+In pin placemnt step we use the HDL netlist to determine where a specific pin should be placed in the circuit.
+
+We join the common pins and try to keep the connections as effecient as possible.
+
+Pins are placed in the Die area. 
+
+The pin for the clock signal is bigger as they contin=nuosly send signals to the entire circuit ie. it drives the chip
+
+No cells are placed between the core and the die.
 
 
 </details>
