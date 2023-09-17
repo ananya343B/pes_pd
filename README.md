@@ -4,7 +4,7 @@
 
 #### Advanced Physical Design using Openlane/Sky130 
 
-<details>
+<details> 
 <summary> 
  Installation
 </summary>
