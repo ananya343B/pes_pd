@@ -366,5 +366,120 @@ The pin for the clock signal is bigger as they contin=nuosly send signals to the
 
 No cells are placed between the core and the die.
 
+### Lab
 
+Run the command ```run_flooorplan``` in the openlane shell
+
+Go to the  ```/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/14-09_17-44/results/floorplan``` directory and run the following command:
+
+```magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &```
+
+ Magic opens and we can see the cell. Use s and then v on the keyboard to center the floorplan. Use z to zoom in.
+ 
+![Screenshot (37)](https://github.com/ananya343B/pes_pd/assets/142582353/b355b0d0-0b3d-449d-9119-b44e22e8d226)
+
+![Screenshot (38)](https://github.com/ananya343B/pes_pd/assets/142582353/ec298ee6-c435-4022-b8ac-e2dbcda38f31)
+
+
+### Library Binding and Placement
+
+Netlist binding and initial place design
+
+Netlist binding is the process of mapping the logical representation of a digital design (typically described in a hardware description language l onto a library of standard cells.
+
+Each component is mapped to a given shape. All these shapes and the working are defined in the library. Then all these shapes from each stage of the netlist are placed onto the floorplan in a efficient way so that delay is minimal.
+
+![Screenshot (39)](https://github.com/ananya343B/pes_pd/assets/142582353/41013d89-a123-44d4-9661-2ab5c8431c6d)
+
+The components of the netlist are placed in the core area.
+
+They are placed according to the convenience of distance from the pins.
+
+When sending signal from FF1 to FF2, according to the circuit requirements, there has to be a very fast propogation of signals. Hence, they are placed very close and buffers are added since there is a small delay for the signal from the pin to reach FF1. The buffers maintain signal integrity.
+
+Estimated wire-length and capacitance is a crucial step to ensure that the physical layout of components and interconnections meets performance and power goals. Wire-length estimation and capacitance modeling help guide the placement process, especially when considering factors like signal delay, power consumption, and signal integrity. If the wire area is big then the resistance and capacitance huge. To maintain signal inteegrity we route the signal through buffers that replicates and routes the signals.
+
+The integration of wire-length and capacitance estimates into the placement optimization process helps balance performance, power, and area trade-offs in the design. The goal is to achieve a placement that minimizes signal delays, reduces power consumption, maintains signal integrity, and meets all design constraints.
+
+- Final placement optimization
+
+When performing final placement optimization with timing analysis using an ideal clock, you are essentially optimizing the physical placement of components within an integrated circuit while assuming that the clock signal is perfect.. This approach allows you to focus primarily on optimizing the physical layout of the design without considering clock-related timing challenges.
+
+- Need for libraries and characterization
+
+Libraries and characterization are foundational elements of the IC design process. Libraries provide standardized building blocks that enhance design productivity and reusability, while characterization provides the essential data needed to accurately model and simulate the behavior of these components, ensuring that the final design meets its performance, power, and reliability goals.
+
+#### Lab
+
+To view the placement, type ```run_placement``` in the openlane shell.
+
+We type the following command in the terminal in the  ../OpenLane/designs/picorv32a/runs/<most_recent_run>/results/placement/ directory
+
+```magic -T ../git_open_pdks/sky130/magic/sky130.tech lef read ../OpenLane/designs/picorv32a/runs/<most_recent_run>/tmp/merged.nom.lef def read picorv32.def &```
+
+![Screenshot (40)](https://github.com/ananya343B/pes_pd/assets/142582353/2f8158ef-1b19-43b1-bda2-98f9de28f1f9)
+
+![Screenshot (41)](https://github.com/ananya343B/pes_pd/assets/142582353/679fbd90-8ca0-401d-bbb6-3194e73b8474)
+
+We can see the standard cells used upon zooming.
+
+#### Cell Design and Characterization Flow
+
+Inputs :Process design kits(PDKs) : DRC and LVS rules, SPICE models, library and user-defined specs.
+
+Design Steps: Circuit Design, Layout Design(Euler Path and Stick Diagram), Characterization.
+
+Outputs: CDL(Circuit Description Language), GDSII, LEF, extracted spice netlist(.cir)
+
+**Characterization Flow**
+
+For an inverter:
+
+1)Read the model files.
+
+2)Read the extracted SPICE netlist.
+
+3)Recognize the behaviour of the buffer.
+
+4)Attaching the necessary power sources
+
+5)Apply the stimulus, which is the input signal to the circuit.
+
+6)Read the sub-circuit of the inverter.
+
+7)Provide necessary output capacitances.
+
+8)Provide the necessary simulation commands
+
+Timing Characterization
+
+- slew_low_rise_thr = 20%
+
+- slew_high_rise_thr = 80%
+
+- slew_low_fall_thr = 20%
+
+- slew_high_fall_thr = 80%
+
+- in_rise_thr = 50%
+
+- in_fall_thr = 50%
+
+- out_rise_thr = 50%
+
+- out_fall_thr = 50%
+
+**Propagation Delay**
+
+The time difference between when the transitional input reaches 50% of its final value and when the output reaches 50% of its final value.
+
+Propagation delay=time(out_fall_thr)-time(in_rise_thr)
+
+**Transition Time**
+
+The time it takes the signal to move between states is the transition time , where the time is measured between 10% and 90% or 20% to 80% of the signal levels.
+
+Rise transition time = time(slew_high_rise_thr) - time (slew_low_rise_thr)
+
+Fall transition time = time(slew_high_fall_thr) - time (slew_low_fall_thr)
 </details>
