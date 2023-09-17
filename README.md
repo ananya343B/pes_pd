@@ -265,7 +265,7 @@ Netlist is generated in the runs folder
 
 ### Chip floorplanning considerations
 
-1) Defining width and height of core and die
+**1) Defining width and height of core and die**
 
    Consider a netlist having flip flops and combinational logic. We take the combinational logic in terms of blocks to calculate the area.
 
@@ -290,6 +290,47 @@ Netlist is generated in the runs folder
    In the above case utilization ratio = 1.  Ideally utilization ratio is 0.5 to 0.6
 
    Aspect ratio = height/ width =1/1 = 1.
+
+
+**2) Defining locations of pre placed cells**
+
+Pre-placed cells are predefined blocks or modules of logic gates, flip-flops, or other functional elements that have a fixed placement on the chip's layout. Unlike standard cells, which are synthesized from a library of basic logic gates and placed automatically by a synthesis tool, pre-placed cells are manually placed by the chip designer in specific locations on the chip.
+
+First divide the logic into blocks:
+
+![Screenshot (28)](https://github.com/ananya343B/pes_pd/assets/142582353/62dfe1be-c7cd-4122-b606-7e5d32387574)
+
+Extend the IO pins and make the blocks as different IPs or modules:
+
+![Screenshot (29)](https://github.com/ananya343B/pes_pd/assets/142582353/e8210d2b-289d-4ba5-8b40-a4c4d640b0b7)
+
+- The arrangement of Ips in a chip is referred as floorplanning.
+
+- These IPs have user defined locations ans hence are placed in the chip before the automated placement and routing is done. These cells are called pre placed cells.
+
+- Automated placement and routing toll places the remaining logical cells in the design onto the chip.
+  
+**3) Surround the preplaced cells with decoupling capacitors**
+
+![Screenshot (24)](https://github.com/ananya343B/pes_pd/assets/142582353/bfcaa1e9-37d6-41f0-87cb-ad7ad9fd8e43)
+
+During the switching operation, current is demanded by the circuit (peak current)
+
+Due to Ldd and Rdd there will be a voltage drop and the voltage at node A is not Vdd but Vdd'.
+
+If Vdd' goes below the noise margin, there can be an incorrect output at the end of the circuit. (Logic 1 becomes Logic 0 and vice versa).
+
+![Screenshot (26)](https://github.com/ananya343B/pes_pd/assets/142582353/856968d5-89bc-4a65-9d3a-80c04a996980)
+
+To avoid this we place a capacitor with large capacitance in paralel to the circuit.
+
+![Screenshot (27)](https://github.com/ananya343B/pes_pd/assets/142582353/2e5c4bcb-41c0-4a57-b9e8-eda55190e263)
+
+Everytime the circuit switches it draws current from the decoupling capacitor, whereas the outer network with the power supply and other componets is used to re-charge the capacitor
+
+The primary purpose of a decoupling capacitor is to reduce or minimize voltage fluctuations and noise on the power supply lines caused by the rapid switching of transistors within the IC. When digital circuits switch, they can draw short bursts of current from the power supply, causing momentary drops in voltage. 
+
+The decoupling capacitor is placed as close to the circuit as possible to minimise loss due to large wire length.
 
 
 
