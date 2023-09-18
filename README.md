@@ -582,11 +582,15 @@ command for layout
 magic -T sky130A.tech sky130_inv.mag &
 ```
 
-image ar
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/11b9e184-92ab-4cf9-b443-a4686251414a)
+
 
 Click on the component and type ```what``` in the tkcon window
 
-image ar
+To select a region, place cursor on that point and press ```s```. 
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/2d0eee22-437e-4056-8c3c-4da2d7b579fa)
+
 
 
 
