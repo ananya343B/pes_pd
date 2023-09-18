@@ -609,9 +609,21 @@ ext2spice cthresh 0 rthresh 0
 ext2spice
 ```
 
-cthresh and rthresh are used to extract all parasatic capacitances.
+```cthresh``` and ```rthresh``` are used to extract all parasatic capacitances.
 
 ![image](https://github.com/ananya343B/pes_pd/assets/142582353/5c6ad2a6-bba0-4576-a7bd-0575b9011e16)
+
+Activate the grid and right click on a grid.
+
+Type the command ```box``` in the tkcon window to checkminimum value ofthe layout.
+
+Spice wrapper file:
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/823afbe2-8bf5-4de1-8b24-79d97902b4cf)
+
+To open the spice file using the command:
+
+```gedit sky130_inv.spice```
 
 Extraxted spice file:
 
@@ -627,6 +639,18 @@ The above file has details of inverter netlist but the sources and their values 
 
 -specify the type of analysis to be done
 
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/76be91a1-7fa3-4e40-99eb-c570e904d620)
+
 
 Modified Spice file:
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/7c3454ba-9929-41b6-8517-a389df818d9e)
+
+To run the spice netlist, run ```ngspice sky130_inv.spice```
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/86771f60-027c-4d51-a818-608d0964dee0)
+
+```plot y vs time a```
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/0020829a-b887-4e5f-8756-5531c84fce26)
 
