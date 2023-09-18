@@ -555,6 +555,18 @@ in the follwoing directory
 ... openlane_working_dir/pdks/sky130A/libs.tech/magic
 ```
 
+command for layout
+
+```
+magic -T sky130A.tech sky130_inv.mag &
+```
+
+image ar
+
+Click on the component and type what in the tkcon window
+
+image ar
+
 
 **16 Mask CMOS Process**
 
