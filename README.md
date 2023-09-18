@@ -663,3 +663,48 @@ Results from the waveform:
 -Cell Rise delay : 0.03593e-9 s
 
 -Cell fall delay : 0.0487e-9 s
+
+#### Sky130 PDKS and Downloading Magic Tool
+
+Enter the command in Desktop
+
+```wget http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz```
+
+
+Extract the file:
+
+```tar xfz drc_tests.tgz``` 
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/1458c0ff-b50f-44a3-b3b4-47dd3edca543)
+
+Open the software:
+
+```magic -d XR```
+
+Open ```met3.meg``` file
+
+ Typing ```drc why``` in the tkcon window gives us the DRC rule violated
+
+ ![image](https://github.com/ananya343B/pes_pd/assets/142582353/762ff6f6-7b0e-449e-a843-7546664ae0e4)
+
+ Add contact cuts add met3 contact by selecting area and clicking on m3contact using middle mouse button. then type  ```cif see VIA2``` in tkcon.
+
+Fixing the errors:
+
+We can see poly.9 is incorrect.
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/01ea2f5d-b5cc-493d-a09e-756c0ac5f85e)
+
+Open the sky130A.tech file in the editor and make the following changes:
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/e3fb56f3-1442-4dfc-9f66-e886ddc22c5d)
+
+Here we have added the following lines:
+
+```spacing xhrpoly,uhrpoly,xpc allpolynonres 480 touching_illegal \
+	"xhrpoly/uhrpoly resistor spacing to diffusion < %d (poly.9)"```
+
+```spacing npres allpolynonres 480 touching_illegal \
+	"poly.resistor spacing to N-tap < %d (poly.9)"```
+
+
