@@ -493,3 +493,6 @@ Fall transition time = time(slew_high_fall_thr) - time (slew_low_fall_thr)
  **IO Placer revision**
 PnR is a iterative flow and hence, we can make changes to the environment variables when required.
 
+To change the pin configuration along the core from equvi distance randomly placed to someother placement.
+
+```set::env(FP IO MODE)2```
