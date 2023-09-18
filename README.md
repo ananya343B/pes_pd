@@ -486,17 +486,10 @@ Fall transition time = time(slew_high_fall_thr) - time (slew_low_fall_thr)
 
 
 <details>
-<summary>DAY 3 :  Design library cell </summary>
+<summary>
+ Day 3
+</summary>
 <br>
+ **IO Placer revision**
+PnR is a iterative flow and hence, we can make changes to the environment variables when required.
 
-## SPICE Deck creation for CMOS Inverter
-
-SPICE deck contains the information of netlist such as:
-
-- Connectivity Information
-
-- Component values
-
-- 'Nodes' identified
-
-- 'Node' names
