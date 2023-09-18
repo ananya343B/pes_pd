@@ -766,9 +766,9 @@ Load sky130A.tech file and doing drc check:
 
 If the error is still present,
 
--Select the existing nwell.4 and make a copy of it by selecting it and clicking 'c'.
+- Select the existing nwell.4 and make a copy of it by selecting it and clicking 'c'.
 
--Now select a small area on the nwell.4 and add 'nsubstratecontact' by hovering over it and clicking middle mouse button.
+- Now select a small area on the nwell.4 and add 'nsubstratecontact' by hovering over it and clicking middle mouse button.
 
 ![image](https://github.com/ananya343B/pes_pd/assets/142582353/32955e4f-17f2-4b85-b0f0-cb99c8be6f87)
 
