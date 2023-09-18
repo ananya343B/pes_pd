@@ -729,3 +729,47 @@ Open the ```nwell.mag``` file in magic. Seletch the nwell.6 and type the command
 
 ![image](https://github.com/ananya343B/pes_pd/assets/142582353/857d3866-1fa8-43ad-b921-2ab17646c761)
 
+We get an error regarding the n well
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/00de5d95-73b9-4534-9fb8-280fba0f3abb)
+
+The following are the changes done in sky130A.tech file to fix the error:
+
+```variants (full)
+cifmaxwidth nwell_untapped 0 bend_illegal \
+	"Nwell missing tap (nwell.4)"
+variants *```
+
+```templayer nwell_tapped
+bloat -all nsc nwell
+ 
+templayer nwell_untapped nwell
+and-not nwell_tapped```
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/64e4564a-cb8c-468a-af07-1b3c6f6ec9ed)
+
+Load sky130A.tech file and doing drc check:
+
+```tech load sky130A.tech```
+
+```drc check```
+
+```drc style drc(full)```
+
+```drc check```
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/a7df037c-e9ca-400e-8939-61073a1ea9d5)
+
+If the error is still present,
+
+-Select the existing nwell.4 and make a copy of it by selecting it and clicking 'c'.
+
+-Now select a small area on the nwell.4 and add 'nsubstratecontact' by hovering over it and clicking middle mouse button.
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/32955e4f-17f2-4b85-b0f0-cb99c8be6f87)
+
+</details>
+
+
+
+
