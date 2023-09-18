@@ -582,7 +582,7 @@ magic -T sky130A.tech sky130_inv.mag &
 
 image ar
 
-Click on the component and type what in the tkcon window
+Click on the component and type ```what``` in the tkcon window
 
 image ar
 
