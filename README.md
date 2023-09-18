@@ -521,9 +521,11 @@ Cutoff - No inversion Triode - Inversion but no pinchoff in channel Saturation -
 
 The voltages at which the switch between the modes of operation happens is dependent on the threshold voltage of the device. Threshold voltage is a function of the W/L ratio of a device, therefore varying the W/L ratio will vary the output waveform of CMOS devices. To enable efficient description of the varying waveforms a single parameter called switching threshold is used. Switching threshold is defined at the intersection of Vin = Vout.
 
-image ar
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/98ba86bb-fac0-4293-9669-018c115636fc)
 
-image ar
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/9e3c77ea-bc56-48a0-bf3f-4ccd7c8fe88a)
+
 
 
 SPICE Simulation steps:
