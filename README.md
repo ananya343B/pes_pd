@@ -654,3 +654,12 @@ To run the spice netlist, run ```ngspice sky130_inv.spice```
 
 ![image](https://github.com/ananya343B/pes_pd/assets/142582353/0020829a-b887-4e5f-8756-5531c84fce26)
 
+Results from the waveform:
+
+-Rise Transition : 0.0375e-9 s
+
+-Fall transition : 0.0284e-9 s
+
+-Cell Rise delay : 0.03593e-9 s
+
+-Cell fall delay : 0.0487e-9 s
