@@ -701,10 +701,8 @@ Open the sky130A.tech file in the editor and make the following changes:
 
 Here we have added the following lines:
 
-```spacing xhrpoly,uhrpoly,xpc allpolynonres 480 touching_illegal \
-	"xhrpoly/uhrpoly resistor spacing to diffusion < %d (poly.9)"```
+```spacing xhrpoly,uhrpoly,xpc allpolynonres 480 touching_illegal \"xhrpoly/uhrpoly resistor spacing to diffusion < %d (poly.9)"```
 
-```spacing npres allpolynonres 480 touching_illegal \
-	"poly.resistor spacing to N-tap < %d (poly.9)"```
+```spacing npres allpolynonres 480 touching_illegal \"poly.resistor spacing to N-tap < %d (poly.9)"```
 
 
