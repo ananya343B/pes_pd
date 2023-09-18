@@ -648,7 +648,6 @@ Modified Spice file:
 
 To run the spice netlist, run ```ngspice sky130_inv.spice```
 
-![image](https://github.com/ananya343B/pes_pd/assets/142582353/86771f60-027c-4d51-a818-608d0964dee0)
 
 ```plot y vs time a```
 
