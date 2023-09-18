@@ -742,7 +742,6 @@ variants *```
 
 ```templayer nwell_tapped
 bloat -all nsc nwell
- 
 templayer nwell_untapped nwell
 and-not nwell_tapped```
 
