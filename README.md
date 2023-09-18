@@ -735,15 +735,20 @@ We get an error regarding the n well
 
 The following are the changes done in sky130A.tech file to fix the error:
 
-```variants (full)
+```
+variants (full)
 cifmaxwidth nwell_untapped 0 bend_illegal \
 	"Nwell missing tap (nwell.4)"
-variants *```
+variants *
+```
 
-```templayer nwell_tapped
+```
+templayer nwell_tapped
 bloat -all nsc nwell
+
 templayer nwell_untapped nwell
-and-not nwell_tapped```
+and-not nwell_tapped
+```
 
 ![image](https://github.com/ananya343B/pes_pd/assets/142582353/64e4564a-cb8c-468a-af07-1b3c6f6ec9ed)
 
