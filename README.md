@@ -515,17 +515,28 @@ To change the pin configuration along the core from equvi distance randomly plac
 
 **SPICE Simulation and Switching Threshold**
 
-![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/29e6f5c4-d166-4283-85c2-81947d29f165)
+Switching Threshold of a CMOS Inverter CMOS cells have three modes of operation:
 
-- The CMOS on the right side has a bigger size than the one on the left.
-  
-- These waveforms tell us that the CMOS is a very robust device. The characteristics of the CMOS are maintained across a variety of sizes.
-  
-- The arrow is pointing to the point where 'Vin = Vout'.
+Cutoff - No inversion Triode - Inversion but no pinchoff in channel Saturation - Inversion and pinchoff in channel
 
-![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/247e37b7-b3b3-4036-9eaf-2c5380a6c71a)
+The voltages at which the switch between the modes of operation happens is dependent on the threshold voltage of the device. Threshold voltage is a function of the W/L ratio of a device, therefore varying the W/L ratio will vary the output waveform of CMOS devices. To enable efficient description of the varying waveforms a single parameter called switching threshold is used. Switching threshold is defined at the intersection of Vin = Vout.
 
-- Above graph gives details on each point and its significance
+image ar
+
+image ar
+
+
+SPICE Simulation steps:
+
+```
+cd <folder where the .cir file is present>
+source CMOS_INVERTER.cir
+run
+setplot
+dc1
+display
+plot out vs in
+```
 
 Git cloning:
 
@@ -564,14 +575,4 @@ in the follwoing directory
 8) Higher Level Metal Formation - Forming contacts and interconnects locally involves depositing a dielectric material like silicon dioxide, patterning it using photolithography, etching contact holes, depositing a barrier metal (e.g., titanium or titanium nitride), filling with a conductor (e.g., aluminum or copper) using chemical vapor deposition (CVD), and then planarizing through chemical-mechanical polishing (CMP).
 
 
-SPICE Simulation steps:
 
-```
-cd <folder where the .cir file is present>
-source CMOS_INVERTER.cir
-run
-setplot
-dc1
-display
-plot out vs in
-```
