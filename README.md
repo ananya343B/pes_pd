@@ -592,7 +592,41 @@ To select a region, place cursor on that point and press ```s```.
 ![image](https://github.com/ananya343B/pes_pd/assets/142582353/2d0eee22-437e-4056-8c3c-4da2d7b579fa)
 
 
+**DRC Check**
+
+To check for DRC Errors, select a region (left click for starting point, right click at end point) and see the DRC column at the top that shows how many DRC errors are present.The Details of DRC Errors will be printed on the console.
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/e7581556-80e0-4a47-a73e-46204491ab5d)
+
+**Extracting to SPICE Command**
+
+Use the following commands in the tkcon window to extract the spice netlist.
+
+```
+pwd
+extract all
+ext2spice cthresh 0 rthresh 0
+ext2spice
+```
+
+cthresh and rthresh are used to extract all parasatic capacitances.
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/5c6ad2a6-bba0-4576-a7bd-0575b9011e16)
+
+Extraxted spice file:
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/f7843a5f-a54d-4647-a64b-6bbbd80518d6)
+
+The above file has details of inverter netlist but the sources and their values are not specified. So we have to modify the file.
+
+-Grid size from the layout is 0.01u
+
+-specify the library for MOS
+
+-create VDD, VSS, Input pulse Va
+
+-specify the type of analysis to be done
 
 
-
+Modified Spice file:
 
