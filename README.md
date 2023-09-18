@@ -540,7 +540,9 @@ cp sky130A.tech /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/v
 
 in the follwoing directory
 
-```... openlane_working_dir/pdks/sky130A/libs.tech/magic```
+```
+... openlane_working_dir/pdks/sky130A/libs.tech/magic
+```
 
 
 **16 Mask CMOS Process**
