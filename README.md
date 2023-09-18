@@ -483,3 +483,20 @@ Rise transition time = time(slew_high_rise_thr) - time (slew_low_rise_thr)
 
 Fall transition time = time(slew_high_fall_thr) - time (slew_low_fall_thr)
 </details>
+
+
+<details>
+<summary>DAY 3 :  Design library cell </summary>
+<br>
+
+## SPICE Deck creation for CMOS Inverter
+
+SPICE deck contains the information of netlist such as:
+
+- Connectivity Information
+
+- Component values
+
+- 'Nodes' identified
+
+- 'Node' names
