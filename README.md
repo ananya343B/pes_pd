@@ -705,4 +705,27 @@ Here we have added the following lines:
 
 ```spacing npres allpolynonres 480 touching_illegal \"poly.resistor spacing to N-tap < %d (poly.9)"```
 
+Loading sky130A.tech file again and check if error is fixed:
+
+```load tech sky130A.tech```
+
+```drc check```
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/76510f52-33cc-43a5-be73-98dd5ea41db4)
+
+We can observe that the error has been rectified
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/c6e68c25-d86e-4eab-a60a-69ab74f3976b)
+
+**DRC error as geometrical construct**
+
+Open the ```nwell.mag``` file in magic. Seletch the nwell.6 and type the commands
+
+```cif ostyle drc```
+
+```cif see dnwell_shrink```
+
+```cif see nwell_missing```
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/857d3866-1fa8-43ad-b921-2ab17646c761)
 
