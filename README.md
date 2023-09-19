@@ -911,7 +911,11 @@ Clock uncertainty, also known as clock skew, is related to the variation in the 
 
 To run CTS :
 
+In terminal:
+
 ```run_cts```
+
+In openlane window:
 
 ```openroad```
 
