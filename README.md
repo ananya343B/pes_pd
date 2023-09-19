@@ -830,3 +830,46 @@ In tkcon window:
 Generated lef file:
 
 ![image](https://github.com/ananya343B/pes_pd/assets/142582353/7124972e-a37e-42ba-9dcc-7be4e6dc8022)
+
+#### Including new cell in synthesis:
+
+Copy the lef file and the libraries.
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/08f07a37-9ec6-48f9-a67c-0e1109b01aeb)
+
+Modify config file to include the libraries and lef file
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/8482bff6-2933-4450-a5d6-8bf3b66eebdb)
+
+Open openlane:
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/44487629-9725-4d92-86a2-449aac92c929)
+
+```prep -design picorv32a -tag 17-09_09-08 -overwrite```
+
+```set lefs [glob $::env(DESIGN_DIR)/src/*.lef]```
+
+```add_lefs -src $lefs```
+
+```run_synthesis```
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/9ee35efb-434a-47e5-90f1-f67c7b36b71d)
+
+**Timing Analysis with Ideal Clocks using openSTA**
+
+Create 2 new files:
+
+- ```pre_sta.conf``` in openlane directory
+
+- ```my_base.sdc``` in src/sky10 directory which is there in picorv32a directory
+
+  ![image](https://github.com/ananya343B/pes_pd/assets/142582353/682d4e6e-1dca-4eca-ae32-1bec02ea5fbf)
+
+
+
+Running floorplan and placement:
+
+```init_floorplan``` 
+
+```run_placement```
+
