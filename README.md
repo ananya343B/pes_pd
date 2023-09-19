@@ -950,3 +950,62 @@ This may be done again to obtain more accurate result.
 ![image](https://github.com/ananya343B/pes_pd/assets/142582353/d3dbe968-e490-48c2-94c0-9db3d50dcbf9)
 
 </details>
+
+
+
+<details>  
+<summary>  
+ Day 5
+</summary>
+<br>
+
+### Power Distribution Network and Routing
+
+PDN (Power Delivery Network) routing is a crucial aspect of integrated circuit design. It involves the creation of a network of traces and components to ensure that power is distributed effectively and reliably to all parts of the electronic device.
+
+Generate the PDN in openlane:
+
+```gen_pdn```
+
+The PDN feature will create:
+
+1)Power ring global to the entire core
+
+2)Power halo local to any preplaced cells
+
+3)Power straps to bring power into the center of the chip
+
+4)Power rails for the standard cells
+
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/2941fb2d-5190-4a67-9552-ce1d7f5ef55c)
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/7e956259-89c2-4da8-8fe4-b7a797b95735)
+
+Run the routing:
+
+```run_routing```
+
+**Global and detailed routing**
+
+Global Routing - Routing guides are generated for interconnects on our netlist defining what layers, and where on the chip each of the nets will be reputed.
+
+Detailed Routing - Metal traces are iteratively laid across the routing guides to physically implement the routing guides.
+
+#### SPEF Extraction
+
+Standard Parasitic Exchange Format:
+
+Represents parasitic information for integrated circuits such as resistance and capacitance which can significantly affect the performance of a circuit. So accurate modeling and extraction of these parasitics are crucial for designing and optimizing electronic devices.
+
+Commands:
+
+```cd Desktop/work/tools/SPEF_Extractor```
+
+```python3 /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/18-09_06-26/tmp/merged.lef /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/18-09_06-26/results/routing/picorv32a.def```
+
+SPEF exracted file is created. 
+
+```/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/18-09_06-26/results/routing/```
+
+Above is the path to the created files.
