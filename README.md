@@ -863,9 +863,27 @@ Create 2 new files:
 
 - ```my_base.sdc``` in src/sky10 directory which is there in picorv32a directory
 
-  ![image](https://github.com/ananya343B/pes_pd/assets/142582353/682d4e6e-1dca-4eca-ae32-1bec02ea5fbf)
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/682d4e6e-1dca-4eca-ae32-1bec02ea5fbf)
 
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/7d7e11ff-83df-47f6-9675-15baa277d1bd)
 
+Running timing analysis:
+
+```sta pre_sta.conf```
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/5c92732a-962c-4aaf-a82e-8f5fa49b8685)
+
+The desired value of slack is above or equal to 0.
+
+To reduce slack violation:
+
+```set ::env(SYNTH_MAX_FANOUT) <value>```
+
+```run_synthesis```
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/de04eca7-8078-4194-bcf0-c2c8c18dc045)
+
+Here the parameter taken is 4.
 
 Running floorplan and placement:
 
@@ -873,3 +891,58 @@ Running floorplan and placement:
 
 ```run_placement```
 
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/48e96fea-6967-4e6c-a1de-73e07056f01d)
+
+**Delay tables**
+
+Delay tables are essential components in digital circuit design and analysis. They provide a way to model and understand the propagation delays of logic gates and interconnects within a digital integrated circuit (IC). These tables ensure that the circuit meets its timing requirements, such as setup and hold times, and they are fundamental to the design of synchronous digital systems.
+
+**Clock jitter and clock uncertainty**
+
+Clock Jitter:
+
+Clock jitter refers to the short-term variations or fluctuations in the timing of a clock signal's edges. It is a critical parameter in digital systems and communication systems, as it can affect the overall system's performance, especially in high-speed or sensitive applications. Clock jitter can be caused by various factors and can manifest as random or deterministic variations in the clock signal's timing.
+
+Clock Uncertainty:
+
+Clock uncertainty, also known as clock skew, is related to the variation in the arrival times of clock signals at different points within a digital system. It is distinct from clock jitter but can also impact system performance and timing. Clock uncertainty can arise due to factors such as clock distribution network delays, routing delays, and variations in clock path lengths.
+
+#### Clock tree synthesis
+
+To run CTS :
+
+```run_cts```
+
+```openroad```
+
+```read_lef /openLANE_flow/designs/picorv32a/runs/17-09_09-08/tmp/merged.lef```
+
+```read_def /openLANE_flow/designs/picorv32a/runs/17-09_09-08/results/cts/picorv32a.cts.def```
+
+```write_db pico_cts.db```
+
+```read_db pico_cts.db```
+
+```read_verilog /openLANE_flow/designs/picorv32a/runs/17-09_09-08/results/synthesis/picorv32a.synthesis_cts.v```
+
+```read_liberty -max $::env(LIB_SLOWEST)```
+
+```read_liberty -max $::env(LIB_FASTEST)```
+
+```read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc```
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/e256fc24-c183-4092-ba5d-e3d460764447)
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/62cfa614-64c7-41e9-8a6b-2a2813c1cbde)
+
+This may be done again to obtain more accurate result.
+
+**Setup and Hold timing**
+
+```report_clock_skew -hold``` 
+
+```report clock_skew -setup```
+
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/d3dbe968-e490-48c2-94c0-9db3d50dcbf9)
+
+</details>
