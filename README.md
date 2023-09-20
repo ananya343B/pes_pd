@@ -998,6 +998,8 @@ Standard Parasitic Exchange Format:
 
 Represents parasitic information for integrated circuits such as resistance and capacitance which can significantly affect the performance of a circuit. So accurate modeling and extraction of these parasitics are crucial for designing and optimizing electronic devices.
 
+The SPEF extractor is not a part of OpenLANE as of now.
+
 Commands:
 
 ```cd Desktop/work/tools/SPEF_Extractor```
