@@ -996,7 +996,7 @@ Detailed Routing - Metal traces are iteratively laid across the routing guides t
 
 Standard Parasitic Exchange Format:
 
-Represents parasitic information for integrated circuits such as resistance and capacitance which can significantly affect the performance of a circuit. So accurate modeling and extraction of these parasitics are crucial for designing and optimizing electronic devices.
+Represents parasitic information for integrated circuits such as resistance and capacitance which can significantly affect the performance of a circuit. So accurate modeling and extraction of these parasitics are crucial for designing and optimizing electronic devices.After routing has been completed interconnect parasitics can be extracted into a SPEF file.
 
 The SPEF extractor is not a part of OpenLANE as of now.
 
