@@ -897,7 +897,8 @@ Running floorplan and placement:
 ![image](https://github.com/ananya343B/pes_pd/assets/142582353/e2fe0723-83a8-4d7a-9522-1a982362be6d)
 
 
-![image](https://github.com/ananya343B/pes_pd/assets/142582353/12bf3b7d-432e-4bbc-beb3-7534568d34cb)
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/acf2d8d1-b4c6-42b7-a670-ca109fcf6ce5)
+
 
 
 **Delay tables**
