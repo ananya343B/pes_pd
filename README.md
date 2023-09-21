@@ -891,7 +891,7 @@ Running floorplan and placement:
 
 ```run_placement```
 
-![image](https://github.com/ananya343B/pes_pd/assets/142582353/956f0c1c-b346-4df4-a203-ad6977b79950)
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/4c7b5d11-d8c9-41a9-8e72-303365eb56a8)
 
 
 ![image](https://github.com/ananya343B/pes_pd/assets/142582353/e2fe0723-83a8-4d7a-9522-1a982362be6d)
