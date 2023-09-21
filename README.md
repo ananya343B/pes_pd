@@ -891,7 +891,8 @@ Running floorplan and placement:
 
 ```run_placement```
 
-![image](https://github.com/ananya343B/pes_pd/assets/142582353/48e96fea-6967-4e6c-a1de-73e07056f01d)
+![image](https://github.com/ananya343B/pes_pd/assets/142582353/83844fe5-1ac6-4376-869f-c33d06f8df57)
+
 
 **Delay tables**
 
